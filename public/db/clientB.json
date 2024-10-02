@@ -1,0 +1,83 @@
+{
+    "template": {
+      "level": 1,
+      "component": "StackLayout",
+      "props": {
+        "align": "center"
+      },
+      "children": [
+        {
+          "level": 2,
+          "component": "Card",
+          "props": {
+            "style": {
+              "width": "500px"
+            }
+          },
+          "children": [
+            {
+                "level": 3,
+                "component": "FormField",
+                "props": {
+                  "style": {
+                    "width": "250px"
+                  }
+                },
+                "children": [
+                    {
+                        "level": 4,
+                        "component": "FormFieldLabel",
+                        "props": {},
+                        "children": [
+                          "Name"
+                        ]
+                      },
+                      {
+                        "level": 4,
+                        "component": "Input",
+                        "props": {},
+                        "children": []
+                      }
+                ]
+              }
+          ]
+        },
+        {
+          "level": 2,
+          "component": "Card",
+          "props": {
+            "style": {
+              "width": "500px"
+            }
+          },
+          "children": [
+            {
+                "level": 2,
+                "component": "FormField",
+                "props": {
+                  "style": {
+                    "width": "250px"
+                  }
+                },
+                "children": [
+                    {
+                        "level": 4,
+                        "component": "FormFieldLabel",
+                        "props": {},
+                        "children": [
+                          "Amount"
+                        ]
+                      },
+                      {
+                        "level": 4,
+                        "component": "Input",
+                        "props": {},
+                        "children": []
+                      }
+                ]
+              }
+          ]
+        }
+      ]
+    }
+  }
