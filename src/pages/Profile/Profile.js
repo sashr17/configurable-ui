@@ -3,6 +3,7 @@ import * as SaltComponents from "@salt-ds/core";
 import axios from "axios";
 
 import { Profiles } from "../../constants";
+import { prepareNestedJSON } from "../../utils/util";
 
 const constructUI = (config) => {
   const Component = SaltComponents[config.component];
@@ -34,8 +35,8 @@ export const Profile = () => {
     axios
       .get(`/db/${profile}.json`)
       .then((res) => {
-        console.log("Template ::", res?.data?.template);
-        setTemplate(res.data?.template);
+        // console.log("Template ::", res?.data?.template);
+        setTemplate(prepareNestedJSON(res.data?.template?.components));
       })
       .catch((err) => {
         console.err(`Error in fetching template :: ${err}`);
@@ -57,7 +58,7 @@ export const Profile = () => {
             />
             <SaltComponents.RadioButton
               label="Client Profile B"
-              value="clientb"
+              value="clientB"
             />
           </SaltComponents.RadioButtonGroup>
         </SaltComponents.FlexItem>
